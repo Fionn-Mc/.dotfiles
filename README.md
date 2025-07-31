@@ -1,1 +1,1 @@
-damn this is UGLY. revising will happen to make this better
+Just some config files, will be updated
