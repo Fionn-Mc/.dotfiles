@@ -7,4 +7,4 @@ ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/bash_aliases ~/.bash_aliases 
 
 
-echo "packages to download: fzf, bat, tig, rg"
+echo "packages to download: fzf, bat, tig, rg, git-lfs (needs initialisation)"
