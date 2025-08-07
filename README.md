@@ -1,7 +1,7 @@
 # Dotfiles
 Contains config for my dev environment.
 ### Requirements
-*|Install:*
+*Install:*
  - git
  - GNU stow
 ### Installation:
