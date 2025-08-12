@@ -29,7 +29,9 @@ alias python='python3'
 alias v='vim'
 alias code='codium'
 # alias vf='fzf --preview "bat -n --color=always {}" --print0 | xargs -0 -o vim'
-alias vf="fzf --bind 'enter:become(vim {})' --preview 'bat -n --color=always {}' --print0"
+# alias vf="fzf --bind 'enter:become(vim {})' --preview 'bat -n --color=always {}' --print0"
+alias vf="fzf --bind 'enter:become(vim {})' --preview 'batcat -n --color=always {}' --print0"
+alias vfg="fdfind --type f --strip-cwd-prefix | vf"
 # alias vfz="fzf --bind '\''enter:become(vim {})'\''"
 
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
