@@ -47,3 +47,9 @@ set hlsearch
 set history=1000
 set hidden
 nnoremap gb :ls<CR>:b<Space>
+
+
+" see marks
+" https://vi.stackexchange.com/questions/8451/is-it-possible-to-have-vim-displaying-the-list-of-available-marks-when-using-mar
+nnoremap <leader>m :<C-u>marks<CR>:normal! `
+nnoremap <leader>c :delmarks A-Z0-9<CR>
