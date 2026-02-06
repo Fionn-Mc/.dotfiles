@@ -14,6 +14,7 @@ set wildmenu
 set wildmode=longest:full,full
 set wildignorecase
 set wildignore=\*.git/\*
+set shortmess-=S
 
 command! MakeTags !ctags -R .
 
