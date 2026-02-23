@@ -11,6 +11,7 @@ return {
 
     font = wezterm.font('JetBrainsMono'),
     font_size = 12,
+    harfbuzz_features = {"calt=0", "clig=0", "liga=0"},
     line_height = 1.2,
     window_decorations = "RESIZE",
     use_dead_keys = false,
