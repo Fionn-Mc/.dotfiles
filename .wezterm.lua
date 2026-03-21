@@ -18,7 +18,18 @@ return {
     scrollback_lines = 5000,
     enable_scroll_bar = true,
     adjust_window_size_when_changing_font_size = false,
+    font_shaper = "Harfbuzz";
+    freetype_load_flags = "NO_HINTING";
     -- hide_tab_bar_if_only_one_tab = true,
+    use_fancy_tab_bar = false;
+    -- window_padding = {
+    --     left = 0,
+    --     right = 0,
+    --     top = 0,
+    --     bottom = -3,
+    -- };
+    adjust_window_size_when_changing_font_size = false;
+
 
     -- -- Define the custom Compline color scheme
     -- color_schemes = {
