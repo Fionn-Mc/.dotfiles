@@ -21,7 +21,7 @@ return {
     font_shaper = "Harfbuzz";
     freetype_load_flags = "NO_HINTING";
     -- hide_tab_bar_if_only_one_tab = true,
-    use_fancy_tab_bar = false;
+    -- use_fancy_tab_bar = false;
     -- window_padding = {
     --     left = 0,
     --     right = 0,
