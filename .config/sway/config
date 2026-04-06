@@ -132,7 +132,6 @@ input "type:keyboard" {
 #
 
     # Switch to workspace
-    bindsym $mod+5 workspace number 5
     bindsym $mod+6 workspace number 6
     bindsym $mod+7 workspace number 7
     bindsym $mod+8 workspace number 8
@@ -143,6 +142,7 @@ input "type:keyboard" {
     bindsym $mod+2 workspace number 2; exec swaymsg '[app_id="org.wezfurlong.wezterm" workspace=2] focus' || wezterm
     bindsym $mod+3 workspace number 3; exec swaymsg '[app_id="firefox" workspace=3] focus' || firefox
     bindsym $mod+4 workspace number 4; exec swaymsg '[app_id="google-chrome" workspace=4] focus' || google-chrome-stable
+    bindsym $mod+5 workspace number 5; exec swaymsg '[app_id="krita" workspace=5] focus' || krita
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
