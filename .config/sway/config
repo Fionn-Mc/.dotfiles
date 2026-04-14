@@ -16,6 +16,8 @@ set $right l
 # Your preferred terminal emulator
 set $term wezterm
 
+for_window [app_id="wezterm"] fullscreen enable
+
 gaps inner 0
 gaps outer 0
 
