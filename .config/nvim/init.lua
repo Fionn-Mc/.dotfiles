@@ -1,62 +1,42 @@
--- general
-vim.cmd([[filetype on]])
-vim.cmd([[filetype plugin on]])
-vim.cmd([[filetype indent on]])
-vim.cmd([[syntax on]])
-vim.cmd([[syntax enable]])
-
 -- selection
-vim.cmd([[set path+=**]])
-vim.cmd([[set wildmenu]])
+vim.opt.path:append("**")
+vim.o.wildmode = "longest:full,full"
+vim.o.wildignorecase = true
+vim.opt.wildignore = { "*.git/*" }
+vim.opt.shortmess:remove("S")
 
-vim.cmd([[set wildmode=longest:full,full]])
-vim.cmd([[set wildignorecase]])
-vim.cmd([[set wildignore=\*.git/\*]])
-vim.cmd([[set shortmess-=S]])
-
-vim.cmd([[command! MakeTags !ctags -R .]])
-
+vim.api.nvim_create_user_command("MakeTags", "!ctags -R .", {})
 
 -- netrw
-vim.cmd([[let g:netrw_banner=0]])           -- disable annoying banner
-vim.cmd([[let g:netrw_browse_split=4]])     -- open in prior window
-vim.cmd([[let g:netrw_altv=1]])             -- open splits to the right
-vim.cmd([[let g:netrw_liststyle=3]])        -- tree view
-vim.cmd([[let g:netrw_list_hide=netrw_gitignore#Hide()]])
-vim.cmd([[let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+']])
+vim.g.netrw_banner = 0
+vim.g.netrw_browse_split = 4
+vim.g.netrw_altv = 1
+vim.g.netrw_liststyle = 3
+vim.g.netrw_list_hide = vim.fn["netrw_gitignore#Hide"]() .. [[,\(^\|\s\s\)\zs\.\S\+]]
 
 -- cosmetic
-vim.cmd([[set cursorcolumn]])
-vim.cmd([[set cursorline]])
-vim.cmd([[set number]])
-vim.cmd([[set relativenumber]])
-vim.cmd([[set scrolloff=10]])
+vim.o.cursorcolumn = true
+vim.o.cursorline = true
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.scrolloff = 10
 
-vim.cmd([[set nocompatible]])
 -- code preferences
-vim.cmd([[set shiftwidth=4]])
-vim.cmd([[set tabstop=4]])
-vim.cmd([[set expandtab]])
-vim.cmd([[set nobackup]])
-vim.cmd([[set nowrap]])
-vim.cmd([[set incsearch]])
-vim.cmd([[set ignorecase]])
-vim.cmd([[set smartcase]])
-vim.cmd([[set showcmd]])
-vim.cmd([[set showmode]])
-vim.cmd([[set showmatch]])
-vim.cmd([[set hlsearch]])
-vim.cmd([[set history=1000]])
-vim.cmd([[set hidden]])
-
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.expandtab = true
+vim.o.backup = false
+vim.o.wrap = false
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.showmatch = true
 
 -- mappings
-vim.cmd([[nnoremap gb :ls<CR>:b<Space>]])
+vim.keymap.set("n", "gb", ":ls<CR>:b ")
 
 -- see marks
 -- https://vi.stackexchange.com/questions/8451/is-it-possible-to-have-vim-displaying-the-list-of-available-marks-when-using-mar
-vim.cmd([[nnoremap <leader>m :<C-u>marks<CR>:normal! `]])
-vim.cmd([[nnoremap <leader>n :<C-u>marks ASDFREWQ<CR>]])
-vim.cmd([[nnoremap <leader>b :<C-u>marks ASDFREWQ<CR>:normal! `]])
-vim.cmd([[nnoremap <leader>c :delmarks A-Z0-9<CR>]])
-
+vim.keymap.set("n", "<leader>m", ":<C-u>marks<CR>:normal! `")
+vim.keymap.set("n", "<leader>n", ":<C-u>marks ASDFREWQ<CR>")
+vim.keymap.set("n", "<leader>b", ":<C-u>marks ASDFREWQ<CR>:normal! `")
+vim.keymap.set("n", "<leader>c", ":delmarks A-Z0-9<CR>")
