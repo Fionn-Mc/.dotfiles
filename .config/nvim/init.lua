@@ -19,7 +19,6 @@ vim.o.cursorcolumn = true
 vim.o.cursorline = true
 vim.o.number = true
 vim.o.relativenumber = true
-vim.o.scrolloff = 10
 
 -- code preferences
 vim.o.shiftwidth = 4
@@ -40,3 +39,4 @@ vim.keymap.set("n", "<leader>m", ":<C-u>marks<CR>:normal! `")
 vim.keymap.set("n", "<leader>n", ":<C-u>marks ASDFREWQ<CR>")
 vim.keymap.set("n", "<leader>b", ":<C-u>marks ASDFREWQ<CR>:normal! `")
 vim.keymap.set("n", "<leader>c", ":delmarks A-Z0-9<CR>")
+
