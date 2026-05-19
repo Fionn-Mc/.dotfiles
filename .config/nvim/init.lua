@@ -1,4 +1,7 @@
--- selection
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
+
+--- selection
 vim.opt.path:append("**")
 vim.o.wildmode = "longest:full,full"
 vim.o.wildignorecase = true
@@ -40,4 +43,3 @@ vim.keymap.set("n", "<leader>m", ":<C-u>marks<CR>:normal! `")
 vim.keymap.set("n", "<leader>n", ":<C-u>marks ASDFREWQ<CR>")
 vim.keymap.set("n", "<leader>b", ":<C-u>marks ASDFREWQ<CR>:normal! `")
 vim.keymap.set("n", "<leader>c", ":delmarks A-Z0-9<CR>")
-
