@@ -18,6 +18,7 @@ alias h='history'
 alias hg='history | grep -i'
 
 alias bat='batcat'
+alias fd='fdfind'
 alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alF'
@@ -29,7 +30,7 @@ alias code='codium'
 # alias vf='fzf --preview "bat -n --color=always {}" --print0 | xargs -0 -o nvim'
 # alias vf="fzf --bind 'enter:become(nvim {})' --preview 'bat -n --color=always {}' --print0"
 alias vf="fzf --bind 'enter:become(nvim {})' --preview 'batcat -n --color=always {}' --print0"
-alias vfg="fdfind --type f --strip-cwd-prefix | vf"
+alias vfg="fd --type f --strip-cwd-prefix | vf"
 # alias vfz="fzf --bind '\''enter:become(nvim {})'\''"
 
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
