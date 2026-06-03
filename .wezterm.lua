@@ -84,6 +84,66 @@ return {
             mods = 'CTRL',
             action = act.DecreaseFontSize,
         },
+
+        -- Left drag release: copy selection to clipboard + primary,
+        -- or open the link on a plain click (no drag)
+        {
+            event = { Up = { streak = 1, button = 'Left' } },
+            mods = 'NONE',
+            action = act.CompleteSelectionOrOpenLinkAtMouseCursor 'ClipboardAndPrimarySelection',
+        },
+
+        -- Plain left drag: extend a cell selection
+        {
+            event = { Drag = { streak = 1, button = 'Left' } },
+            mods = 'NONE',
+            action = act.ExtendSelectionToMouseCursor 'Cell',
+        },
+
+        -- Double-click selects word, triple-click selects line
+        {
+            event = { Up = { streak = 2, button = 'Left' } },
+            mods = 'NONE',
+            action = act.SelectTextAtMouseCursor 'Word',
+        },
+        {
+            event = { Up = { streak = 3, button = 'Left' } },
+            mods = 'NONE',
+            action = act.SelectTextAtMouseCursor 'Line',
+        },
+
+        -- Ctrl+Left: start a rectangular block selection on press,
+        -- extend it on drag, and on release copy the block (if dragged)
+        -- or open the link under the cursor (if it was just a click)
+        {
+            event = { Down = { streak = 1, button = 'Left' } },
+            mods = 'CTRL',
+            action = act.SelectTextAtMouseCursor 'Block',
+        },
+        {
+            event = { Drag = { streak = 1, button = 'Left' } },
+            mods = 'CTRL',
+            action = act.ExtendSelectionToMouseCursor 'Block',
+        },
+        {
+            event = { Up = { streak = 1, button = 'Left' } },
+            mods = 'CTRL',
+            action = act.CompleteSelectionOrOpenLinkAtMouseCursor 'ClipboardAndPrimarySelection',
+        },
+
+        -- Right click: paste from system clipboard
+        {
+            event = { Down = { streak = 1, button = 'Right' } },
+            mods = 'NONE',
+            action = act.PasteFrom 'Clipboard',
+        },
+
+        -- Middle click: paste from X11 primary selection
+        {
+            event = { Down = { streak = 1, button = 'Middle' } },
+            mods = 'NONE',
+            action = act.PasteFrom 'PrimarySelection',
+        },
     },
 }
 
