@@ -35,7 +35,8 @@ alias vfg="fd --type f --strip-cwd-prefix | vf"
 
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias c='clear'
-# alias vim='nvim'
+alias vim='nvim'
 alias nv='nvim'
 
 alias cons1='sudo minicom -D /dev/ttyUSB0 -b 9600'
+alias cost='npx ccusage@latest daily'
