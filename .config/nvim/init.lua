@@ -22,7 +22,7 @@ vim.o.cursorcolumn = true
 vim.o.cursorline = true
 vim.o.number = true
 vim.o.relativenumber = true
-vim.o.termguicolors = false
+vim.o.termguicolors = true
 
 -- code preferences
 vim.o.shiftwidth = 4
