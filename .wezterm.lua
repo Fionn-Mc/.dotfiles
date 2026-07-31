@@ -68,7 +68,9 @@ return {
     -- },
     -- Activate the scheme
     -- color_scheme = 'Compline'
-    color_scheme = 'nord',
+    color_scheme = 'Gruvbox Material (Gogh)',
+    -- color_scheme = 'tokyonight_night',
+    -- color_scheme = 'nord',
 
     mouse_bindings = {
         -- Scrolling up while holding CTRL increases the font size
