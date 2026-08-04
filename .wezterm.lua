@@ -69,6 +69,9 @@ return {
     -- Activate the scheme
     -- color_scheme = 'Compline'
     color_scheme = 'Gruvbox Material (Gogh)',
+    colors = {
+        scrollbar_thumb = '#7c6f64', -- gruvbox-material grey1
+    },
     -- color_scheme = 'tokyonight_night',
     -- color_scheme = 'nord',
 
