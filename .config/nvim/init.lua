@@ -7,6 +7,7 @@ vim.o.wildmode = "longest:full,full"
 vim.o.wildignorecase = true
 vim.opt.wildignore = { "*.git/*" }
 vim.opt.shortmess:remove("S")
+vim.opt.mouse = "a"
 
 vim.api.nvim_create_user_command("MakeTags", "!ctags -R .", {})
 
@@ -18,8 +19,8 @@ vim.g.netrw_liststyle = 3
 -- vim.g.netrw_list_hide = vim.fn["netrw_gitignore#Hide"]() .. [[,\(^\|\s\s\)\zs\.\S\+]]
 
 -- cosmetic
-vim.o.cursorcolumn = true
-vim.o.cursorline = true
+vim.o.cursorcolumn = false
+vim.o.cursorline = false
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.termguicolors = true
