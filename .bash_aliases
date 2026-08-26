@@ -15,6 +15,7 @@ alias grep='grep --color=auto'
 alias gs='git status'
 alias gsp='git status --porcelain'
 alias h='history'
+alias khunk="hunk diff --watch -- . ':!**/contract-check.sh'"
 alias hg='history | grep -i'
 
 alias bat='batcat'
