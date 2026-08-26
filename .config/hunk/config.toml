@@ -1,2 +1,58 @@
-theme = "auto"
+# Gruvbox Material (matches WezTerm color_scheme = 'Gruvbox Material (Gogh)')
+theme = "custom"
 transparent_background = true
+
+[custom_theme]
+base = "gruvbox-dark-medium"
+label = "Gruvbox Material"
+
+background       = "#282828"
+panel            = "#32302f"
+panelAlt         = "#3c3836"
+border           = "#45403d"
+accent           = "#a9b665"
+accentMuted      = "#5a524c"
+text             = "#d4be98"
+muted            = "#928374"
+
+addedBg          = "#333e1f"
+removedBg        = "#3c2528"
+movedAddedBg     = "#0e363e"
+movedRemovedBg   = "#3c2a3c"
+contextBg        = "#282828"
+addedContentBg   = "#3d4a24"
+removedContentBg = "#4a2b2f"
+contextContentBg = "#282828"
+addedSignColor   = "#a9b665"
+removedSignColor = "#ea6962"
+
+lineNumberBg     = "#282828"
+lineNumberFg     = "#928374"
+selectedHunk     = "#45403d"
+
+badgeAdded       = "#a9b665"
+badgeRemoved     = "#ea6962"
+badgeNeutral     = "#928374"
+fileNew          = "#a9b665"
+fileDeleted      = "#ea6962"
+fileRenamed      = "#d8a657"
+fileModified     = "#7daea3"
+fileUntracked    = "#928374"
+
+noteBorder          = "#7daea3"
+noteBackground      = "#32302f"
+noteTitleBackground = "#45403d"
+noteTitleText       = "#d4be98"
+
+[custom_theme.syntax]
+default     = "#d4be98"
+keyword     = "#ea6962"
+string      = "#a9b665"
+comment     = "#928374"
+number      = "#d3869b"
+function    = "#a9b665"
+property    = "#7daea3"
+type        = "#d8a657"
+variable    = "#d4be98"
+operator    = "#e78a4e"
+punctuation = "#928374"
