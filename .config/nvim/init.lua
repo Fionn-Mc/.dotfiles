@@ -36,7 +36,7 @@ vim.o.smartcase = true
 vim.o.showmatch = true
 
 -- mappings
-vim.keymap.set("n", "gb", ":ls<CR>:b ")
+-- vim.keymap.set("n", "gb", ":ls<CR>:b ")
 
 -- see marks
 -- https://vi.stackexchange.com/questions/8451/is-it-possible-to-have-vim-displaying-the-list-of-available-marks-when-using-mar
