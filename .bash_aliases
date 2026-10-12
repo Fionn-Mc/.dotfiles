@@ -41,3 +41,6 @@ alias nv='nvim'
 
 alias cons1='sudo minicom -D /dev/ttyUSB0 -b 9600'
 alias cost='npx ccusage@latest daily'
+
+# Claude Code: never auto-continue AskUserQuestion on AFK idle (default is 60s)
+export CLAUDE_AFK_TIMEOUT_MS=999999999
